@@ -1,1 +1,9 @@
-console.log("TheSubnetGuy website loaded successfully 🚀");
+// Efecto scroll en el navbar
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector("nav");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
