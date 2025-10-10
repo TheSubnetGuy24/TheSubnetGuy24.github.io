@@ -2,28 +2,135 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>The Subnet Guy 24</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshua - Ingeniero de Redes</title>
   <style>
     body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0f172a;
-      color: #f8fafc;
-      font-family: Arial, sans-serif;
+      color: #e2e8f0;
+    }
+    header {
+      background-color: #1e293b;
+      padding: 30px 20px;
       text-align: center;
-      padding-top: 100px;
     }
-    h1 { color: #38bdf8; }
-    a {
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+      font-size: 2.5em;
+    }
+    header p {
       color: #94a3b8;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
+      margin-top: 5px;
+      font-size: 1.1em;
     }
-    a:hover { color: #38bdf8; }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 5px;
+    }
+    .project, .cert {
+      background-color: #1e293b;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+    .project h3, .cert h3 {
+      margin: 0;
+      color: #f1f5f9;
+    }
+    .project p, .cert p {
+      color: #cbd5e1;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #1e293b;
+      color: #94a3b8;
+      margin-top: 50px;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #0ea5e9;
+    }
+    .social-links a {
+      margin: 0 10px;
+      color: #94a3b8;
+    }
+    .social-links a:hover {
+      color: #38bdf8;
+    }
   </style>
 </head>
 <body>
-  <h1>🌐 The Subnet Guy 24</h1>
-  <p>Ingeniero de redes compartiendo configuraciones, proyectos y tips de networking.</p>
-  <a href="https://github.com/TheSubnetGuy24" target="_blank">Ver mis repositorios</a>
+  <header>
+    <h1>Joshua - Ingeniero de Redes</h1>
+    <p>Especialista en infraestructura, VLANs, routing, switching y automatización</p>
+  </header>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy ingeniero de redes apasionado por la conectividad, la automatización y el aprendizaje continuo.
+      Me enfoco en crear infraestructuras estables, seguras y escalables. 
+      Actualmente comparto mis proyectos y configuraciones para ayudar a otros a dominar el networking.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos</h2>
+
+    <div class="project">
+      <h3>Configuración de VLANs en entorno Cisco</h3>
+      <p>Ejemplo práctico de segmentación de red, configuración de troncales y verificación de tráfico inter-VLAN.</p>
+      <a href="https://github.com/TheSubnetGuy24/VLAN-Lab" target="_blank">Ver proyecto en GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>Automatización con Python y Netmiko</h3>
+      <p>Script para automatizar configuraciones en múltiples switches Cisco mediante SSH con Netmiko.</p>
+      <a href="https://github.com/TheSubnetGuy24/Netmiko-Automation" target="_blank">Ver proyecto en GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>Laboratorio BGP entre routers virtuales</h3>
+      <p>Simulación de red BGP en GNS3 con anuncios de prefijos, AS-Path y políticas de enrutamiento.</p>
+      <a href="https://github.com/TheSubnetGuy24/BGP-Lab" target="_blank">Ver proyecto en GitHub</a>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certificaciones y Skills</h2>
+
+    <div class="cert">
+      <h3>Certificaciones</h3>
+      <p>✅ Cisco CCNA<br>✅ CompTIA Network+<br>✅ Fortinet NSE 4 (en progreso)</p>
+    </div>
+
+    <div class="cert">
+      <h3>Habilidades técnicas</h3>
+      <p>Routing & Switching | VLANs | BGP | OSPF | Firewalls | Python | Netmiko | Packet Tracer | GNS3 | Linux</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Joshua “The Subnet Guy 24” — Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="https://github.com/TheSubnetGuy24" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="mailto:thesubnetguy24@gmail.com">Email</a>
+    </div>
+  </footer>
 </body>
 </html>
+
