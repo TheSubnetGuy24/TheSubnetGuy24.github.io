@@ -1,10 +1,5 @@
-/* ----------- RESET & BASE ----------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ----------- BASE ----------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0d0d0d;
@@ -14,23 +9,14 @@ body {
 
 /* ----------- NAVBAR ----------- */
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky; top: 0; z-index: 1000;
   background: rgba(18, 18, 18, 0.8);
   backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; justify-content: space-between; align-items: center;
   padding: 1rem 2rem;
   border-bottom: 2px solid #facc15;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
-}
-
-nav.scrolled {
-  background: rgba(18, 18, 18, 0.95);
-  box-shadow: 0 0 25px rgba(250, 204, 21, 0.4);
 }
 
 .logo {
@@ -38,18 +24,9 @@ nav.scrolled {
   font-size: 0.9rem;
   color: #facc15;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px #facc15;
-  transition: 0.3s ease;
 }
 
-.logo:hover {
-  text-shadow: 0 0 15px #facc15, 0 0 30px #facc15;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
+.nav-links { display: flex; gap: 2rem; }
 
 .nav-links a {
   font-family: 'Press Start 2P', cursive;
@@ -57,136 +34,8 @@ nav.scrolled {
   font-size: 0.6rem;
   text-decoration: none;
   transition: 0.3s ease;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: #facc15;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
 }
 
 .nav-links a:hover {
   color: #facc15;
-  text-shadow: 0 0 6px #facc15;
-}
-
-/* ----------- HERO ----------- */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-  background-color: #0f0f0f;
-}
-
-/* Glitch dorado/blanco */
-.hero h1 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1.8rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-  animation: glitch-skew 1s infinite linear alternate-reverse;
-}
-
-.hero h1::before,
-.hero h1::after {
-  content: 'Welcome to My Personal Blog';
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.8;
-  clip-path: inset(0 0 0 0);
-}
-
-.hero h1::before {
-  color: #facc15;
-  transform: translate(-2px, -2px);
-  animation: glitchTop 2s infinite linear alternate-reverse;
-}
-
-.hero h1::after {
-  color: #ffffff80;
-  transform: translate(2px, 2px);
-  animation: glitchBottom 2s infinite linear alternate-reverse;
-}
-
-@keyframes glitchTop {
-  0% { clip-path: inset(0 0 80% 0); transform: translate(-2px, -2px); }
-  50% { clip-path: inset(40% 0 20% 0); transform: translate(-3px, -1px); }
-  100% { clip-path: inset(80% 0 0 0); transform: translate(-1px, -3px); }
-}
-
-@keyframes glitchBottom {
-  0% { clip-path: inset(80% 0 0 0); transform: translate(2px, 2px); }
-  50% { clip-path: inset(20% 0 40% 0); transform: translate(3px, 1px); }
-  100% { clip-path: inset(0 0 80% 0); transform: translate(1px, 3px); }
-}
-
-@keyframes glitch-skew {
-  0% { transform: skew(0deg); }
-  50% { transform: skew(1deg); }
-  100% { transform: skew(-1deg); }
-}
-
-/* Subtítulo */
-.hero p {
-  font-family: 'Press Start 2P', cursive;
-  color: #facc15;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 25px;
-  text-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
-}
-
-/* ----------- CONTENT ----------- */
-.content {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.intro h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
-  color: #facc15;
-  margin-bottom: 25px;
-  text-shadow: 0 0 6px #facc15;
-}
-
-.intro p {
-  max-width: 700px;
-  margin: 0 auto 60px;
-  color: #b3b3b3;
-  line-height: 1.8;
-}
-
-/* ----------- CARDS ----------- */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  background-color: #1b1b1b;
-  border: 2px solid #2a2a2a;
-  border-radius: 12px;
-  padding: 30px;
-  width: 300px;
-  transition: 0.4s ease;
-}
-
-.card:hover {
-  b
+  text
