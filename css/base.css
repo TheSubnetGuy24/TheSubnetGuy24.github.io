@@ -26,6 +26,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* 🔥 evita desbordes en móvil */
   padding: 1rem 2rem;
   border-bottom: 2px solid #facc15;
   box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
@@ -44,6 +45,7 @@ nav.scrolled {
   letter-spacing: 2px;
   text-shadow: 0 0 10px #facc15;
   transition: 0.3s;
+  white-space: nowrap; /* evita salto del logo */
 }
 
 .logo:hover {
@@ -53,6 +55,9 @@ nav.scrolled {
 .nav-links {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap; /* 🔥 se ajusta si no cabe */
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-links a {
@@ -64,9 +69,55 @@ nav.scrolled {
   position: relative;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #facc15;
   text-shadow: 0 0 6px #facc15;
+}
+
+/* ==========================
+   RESPONSIVE NAVBAR
+========================== */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+  }
+
+  .nav-links a:hover {
+    background: rgba(250, 204, 21, 0.1);
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    font-size: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 0.7rem;
+  }
+
+  .nav-links a {
+    font-size: 0.55rem;
+    padding: 5px 8px;
+  }
 }
 
 /* ==========================
