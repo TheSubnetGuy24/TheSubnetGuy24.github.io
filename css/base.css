@@ -1,0 +1,84 @@
+/* ================================
+   BASE STYLES — TheSubnetGuy Theme
+================================== */
+
+/* ---- RESET ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---- VARIABLES ---- */
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-mid: #1a1a1a;
+  --accent: #facc15;
+  --text-light: #f5f5f5;
+  --text-gray: #b3b3b3;
+  --font-main: 'Poppins', sans-serif;
+  --font-pixel: 'Press Start 2P', cursive;
+}
+
+/* ---- GLOBAL ---- */
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---- NAVBAR ---- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--accent);
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(18, 18, 18, 0.95);
+  box-shadow: 0 2px 15px rgba(250, 204, 21, 0.3);
+}
+
+.logo {
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background: radial-gradient(circle at top, rgba(250, 204, 21, 0.15), var(--bg-mid) 80%);
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 -4px 15px rgba(250, 204, 21, 0.2);
