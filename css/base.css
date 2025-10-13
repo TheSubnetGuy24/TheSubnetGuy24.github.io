@@ -212,6 +212,41 @@ footer .socials a {
   transition: 0.3s;
 }
 
+/* ==========================
+   ACTIVE LINK (Página actual)
+========================== */
+.nav-links a.active {
+  color: #facc15;
+  text-shadow: 0 0 6px #facc15, 0 0 20px #facc15;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #facc15, transparent);
+  box-shadow: 0 0 10px #facc15;
+  border-radius: 2px;
+}
+
+/* ==========================
+   HAMBURGER ACTIVE GLOW
+========================== */
+.hamburger.active {
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+  border-color: #fff;
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+.hamburger.active span {
+  background: #fff;
+}
+
+
 footer .socials a:hover {
   color: #fff;
   text-shadow: 0 0 8px #facc15;
