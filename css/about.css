@@ -1,15 +1,18 @@
 .about-hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 140px 20px;
   background: linear-gradient(180deg, #0f0f0f 0%, #111 100%);
+  border-bottom: 2px solid #facc15;
 }
+
 .about-hero h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.6rem;
   color: #fff;
-  text-shadow: 0 0 10px #facc15, 0 0 30px #facc15;
+  text-shadow: 0 0 12px #facc15, 0 0 40px #facc15;
   letter-spacing: 2px;
 }
+
 .about-hero p {
   font-family: 'Press Start 2P', cursive;
   color: #facc15;
@@ -18,34 +21,38 @@
   letter-spacing: 2px;
 }
 
-/* Terminal */
+/* SEPARADOR */
+.section-divider {
+  width: 80%;
+  height: 2px;
+  margin: 50px auto;
+  background: radial-gradient(circle, #facc15 0%, transparent 70%);
+  box-shadow: 0 0 15px #facc15;
+  opacity: 0.8;
+}
+
+/* TERMINAL SECTION */
 .about-terminal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   gap: 60px;
-  padding: 100px 10%;
-  background: repeating-linear-gradient(to bottom, #0f0f0f, #0f0f0f 49px, #1a1a1a 50px);
-  position: relative;
-}
-
-.about-terminal::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  padding: 80px 10%;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(250, 204, 21, 0.05),
-    rgba(250, 204, 21, 0.05) 1px,
-    transparent 2px
+    #0f0f0f,
+    #0f0f0f 49px,
+    #1a1a1a 50px
   );
-  pointer-events: none;
-  opacity: 0.25;
+  position: relative;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
 }
 
-/* Foto con glow */
+/* GLOW PHOTO */
 .profile-photo {
-  flex: 1 1 250px;
+  flex: 1 1 260px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,17 +63,17 @@
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.35), transparent 60%);
+  background: radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.3), transparent 60%);
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 0 18px rgba(250, 204, 21, 0.35));
-  animation: ringGlow 3s ease-in-out infinite alternate;
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.4);
+  animation: ringPulse 3s ease-in-out infinite alternate;
 }
 
-@keyframes ringGlow {
-  0%   { filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.25)); }
-  100% { filter: drop-shadow(0 0 26px rgba(250, 204, 21, 0.55)); }
+@keyframes ringPulse {
+  0%   { box-shadow: 0 0 18px rgba(250, 204, 21, 0.25); }
+  100% { box-shadow: 0 0 35px rgba(250, 204, 21, 0.6); }
 }
 
 .photo-ring img {
@@ -74,6 +81,126 @@
   height: 230px;
   border-radius: 50%;
   border: 3px solid #facc15;
-  box-shadow: 0 0 22px rgba(250, 204, 21, 0.4);
   object-fit: cover;
+}
+
+/* CARD */
+.profile-card {
+  flex: 1 1 600px;
+  background: linear-gradient(180deg, #1b1b1b, #141414);
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  padding: 50px;
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.05);
+}
+
+.profile-card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.profile-card .highlight {
+  color: #facc15;
+}
+
+.profile-card p {
+  color: #d1d1d1;
+  line-height: 1.8;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill-box {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(250, 204, 21, 0.05);
+  transition: 0.3s ease;
+}
+
+.skill-box:hover {
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+.skill-box h3 {
+  font-family: 'Press Start 2P', cursive;
+  color: #facc15;
+  font-size: 0.7rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.skill-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-box ul li {
+  font-family: 'Poppins', sans-serif;
+  color: #e5e5e5;
+  margin-bottom: 8px;
+}
+
+/* LANGUAGES */
+.lang-chips span {
+  display: inline-block;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin-right: 6px;
+  color: #facc15;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+}
+
+/* Meters */
+.meter {
+  margin-top: 10px;
+}
+.meter-label {
+  font-size: 0.85rem;
+  color: #ddd;
+  margin-bottom: 4px;
+}
+.meter-bar {
+  height: 8px;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.meter-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #facc15, #fffbcc);
+}
+
+/* CONTACT */
+.contact-list a {
+  color: #facc15;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER DENTRO DE CARD */
+.terminal-footer {
+  margin-top: 40px;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 20px;
+  text-align: center;
+}
+.terminal-footer .btn {
+  margin-top: 15px;
 }
