@@ -453,3 +453,133 @@ footer .socials a:hover {
     font-size: 0.9rem;
   }
 }
+
+
+/* ---------- ABOUT PAGE ---------- */
+.about-hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #0f0f0f 0%, #111111 100%);
+}
+
+.about-hero h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
+}
+
+.about-hero p {
+  font-family: 'Press Start 2P', cursive;
+  color: #facc15;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-top: 25px;
+  text-shadow: 0 0 8px #facc15;
+}
+
+/* ABOUT SECTION */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 100px 10%;
+  background: radial-gradient(circle at top, rgba(250, 204, 21, 0.05), #0f0f0f 90%);
+}
+
+.about-photo {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 3px solid #facc15;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);
+}
+
+.about-text {
+  flex: 1 1 500px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  color: #facc15;
+  text-shadow: 0 0 6px #facc15;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-family: 'Poppins', sans-serif;
+  color: #cfcfcf;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Skills Section */
+.skills, .languages {
+  margin-top: 30px;
+}
+
+.skills h3, .languages h3 {
+  font-family: 'Press Start 2P', cursive;
+  color: #facc15;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.skills ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills li {
+  background: #1b1b1b;
+  margin: 8px 0;
+  padding: 10px;
+  border-left: 4px solid #facc15;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.skills li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
