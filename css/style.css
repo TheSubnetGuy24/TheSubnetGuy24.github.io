@@ -455,7 +455,7 @@ footer .socials a:hover {
 }
 
 
-/* ---------- ABOUT TERMINAL STYLE ---------- */
+/* ---------- ABOUT (Terminal style) ---------- */
 .about-hero {
   text-align: center;
   padding: 120px 20px;
@@ -476,7 +476,7 @@ footer .socials a:hover {
   letter-spacing: 2px;
 }
 
-/* Main layout */
+/* Layout */
 .about-terminal {
   display: flex;
   flex-wrap: wrap;
@@ -488,14 +488,11 @@ footer .socials a:hover {
   overflow: hidden;
 }
 
-/* Subtle scanlines effect */
+/* Scanlines sutiles */
 .about-terminal::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: repeating-linear-gradient(
     to bottom,
     rgba(250, 204, 21, 0.05),
@@ -503,142 +500,48 @@ footer .socials a:hover {
     transparent 2px
   );
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
-/* Profile Photo */
+/* Foto con glow (sin rotación) */
 .profile-photo {
   flex: 1 1 250px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .photo-ring {
   position: relative;
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  animation: ringRotate 8s linear infinite;
-  background: conic-gradient(
-    from 0deg,
-    #facc15,
-    transparent 120deg,
-    #facc15 240deg,
-    transparent 360deg
-  );
+  background: radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.35), transparent 60%);
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(0 0 18px rgba(250, 204, 21, 0.35));
+  animation: ringGlow 3s ease-in-out infinite alternate; /* pulso suave */
 }
+
+@keyframes ringGlow {
+  0%   { filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.25)); }
+  100% { filter: drop-shadow(0 0 26px rgba(250, 204, 21, 0.55)); }
+}
+
 .photo-ring img {
   width: 230px;
   height: 230px;
   border-radius: 50%;
   border: 3px solid #facc15;
-  box-shadow: 0 0 25px rgba(250, 204, 21, 0.4);
+  box-shadow: 0 0 22px rgba(250, 204, 21, 0.4);
   object-fit: cover;
 }
-@keyframes ringRotate {
-  to { transform: rotate(360deg); }
-}
 
-/* Profile Card */
+/* Card */
 .profile-card {
-  flex: 1 1 500px;
-  background: linear-gradient(180deg, #1b1b1b, #111);
-  border: 1px solid #2a2a2a;
-  border-left: 4px solid #facc15;
-  border-radius: 12px;
-  padding: 50px;
-  box-shadow: 0 0 20px rgba(250, 204, 21, 0.1);
-  position: relative;
-}
-.profile-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(250, 204, 21, 0.05);
-  opacity: 0;
-  transition: 0.5s;
-}
-.profile-card:hover::before {
-  opacity: 1;
-}
+  flex: 1 1 520px;
+  background: linear-gradient(
 
-/* Text inside card */
-.card-header h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.9rem;
-  color: #facc15;
-  margin-bottom: 10px;
-}
-.card-header p {
-  font-family: 'Poppins', sans-serif;
-  color: #cfcfcf;
-  margin-bottom: 20px;
-}
-.card-body p {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.8;
-  color: #c5c5c5;
-  margin-bottom: 30px;
-}
-
-/* Skills grid */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.skill-box {
-  flex: 1 1 200px;
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  padding: 20px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-.skill-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(250, 204, 21, 0.2);
-}
-.skill-box h3 {
-  font-family: 'Press Start 2P', cursive;
-  color: #facc15;
-  font-size: 0.7rem;
-  margin-bottom: 10px;
-}
-.skill-box li {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
-  color: #ccc;
-  list-style: none;
-  margin: 6px 0;
-}
-
-/* Footer inside card */
-.terminal-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-  font-size: 0.75rem;
-  font-family: 'Press Start 2P', cursive;
-  color: #a1a1a1;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .about-terminal {
-    flex-direction: column;
-  }
-  .profile-card {
-    padding: 35px 25px;
-  }
-  .terminal-footer {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
 
 
