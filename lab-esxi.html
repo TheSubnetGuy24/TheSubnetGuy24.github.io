@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VMware ESXi Setup | TheSubnetGuy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/labs.css"> <!-- Reutiliza tu mismo labs.css -->
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="logo">TheSubnetGuy</div>
+  
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="labs.html">Labs</a>
+      <a href="about.html">About Me</a>
+      <a href="experience.html">Work Experience</a>
+    </div>
+  </nav>
+
+  <!-- HERO (usa el mismo diseño del labs-hero) -->
+  <header class="labs-hero">
+    <h1>🔧 VMware ESXi Setup on VMware Workstation</h1>
+    <p>Building a nested virtualization environment for testing and training.</p>
+  </header>
+
+  <!-- SEPARADOR -->
+  <div class="section-divider"></div>
+
+  <!-- CONTENIDO DEL LAB -->
+  <section class="labs-feed">
+
+    <article class="lab-item">
+      <div class="lab-info">
+        <h2>🧠 Overview</h2>
+        <p>
+          This lab focuses on installing and configuring <strong>VMware ESXi</strong> inside 
+          <strong>VMware Workstation</strong> to create a self-contained, 
+          virtualized environment for network testing and system performance validation.
+        </p>
+      </div>
+    </article>
+
+    <article class="lab-item">
+      <div class="lab-info">
+        <h2>🗺️ Topology</h2>
+        <p>
+          The setup includes one <strong>ESXi host</strong>, a <strong>management VM</strong>, 
+          and several <strong>virtual switches</strong> for isolated LAN and DMZ networks.
+        </p>
+        <img src="img/labs/esxi-topology.png" alt="VMware ESXi Topology" style="max-width:90%; border:2px solid #facc15; border-radius:8px; display:block; margin:20px auto;">
+      </div>
+    </article>
+
+    <article class="lab-item">
+      <div class="lab-info">
+        <h2>⚙️ Setup Steps</h2>
+        <p>
+          Follow these key steps to complete the setup:
+        </p>
+        <ol style="color:#d1d1d1; font-family:'Poppins',sans-serif; line-height:1.8; text-align:justify;">
+          <li>Install <strong>VMware Workstation</strong> and create a VM for ESXi.</li>
+          <li>Enable <strong>nested virtualization</strong> and VT-x in settings.</li>
+          <li>Attach three network adapters: <strong>LAN</strong>, <strong>DMZ</strong>, and <strong>Management</strong>.</li>
+          <li>Deploy a <strong>pfSense firewall</strong> or test VM and validate connectivity.</li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="lab-item">
+      <div class="lab-info">
+        <h2>💻 Example Commands</h2>
+        <pre style="background:#101010; padding:15px; border-radius:8px; color:#facc15; overflow-x:auto;">
+# Enable nested virtualization in PowerShell
+Set-VMProcessor -VMName "ESXi-Lab" -ExposeVirtualizationExtensions $true
+
+# Check ESXi management interface
+ping 192.168.10.2
+        </pre>
+      </div>
+    </article>
+
+    <article class="lab-item">
+      <div class="lab-info">
+        <h2>📊 Results</h2>
+        <p>
+          The environment successfully runs nested virtualization and simulates 
+          real enterprise scenarios, including <strong>firewall testing</strong>, 
+          <strong>network segmentation</strong>, and <strong>resource monitoring</strong>.
+        </p>
+
+        <div class="tags">
+          <span>VMware ESXi</span>
+          <span>VMware Workstation</span>
+          <span>Virtualization</span>
+          <span>Networking</span>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- SEPARADOR FINAL -->
+  <div class="section-divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with 💻 + ☕ by <span class="highlight">TheSubnetGuy</span></p>
+    <div class="socials">
+      <a href="https://github.com/thesubnetguy24" target="_blank">GitHub</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
