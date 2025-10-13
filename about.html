@@ -4,21 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - TheSubnetGuy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav>
+  <!-- NAVBAR -->
+  <nav id="navbar">
     <div class="logo">TheSubnetGuy</div>
     <div class="nav-links">
+      <a href="index.html">Home</a>
       <a href="labs.html">Labs</a>
-      <a href="about.html" class="active">About Me</a>
       <a href="experience.html">Work Experience</a>
     </div>
   </nav>
 
-  <section class="hero">
+  <!-- ABOUT HERO -->
+  <header class="about-hero">
     <h1>About Me</h1>
-    <p>Ingeniero de redes apasionado por la automatización, la infraestructura y el aprendizaje constante.</p>
+    <p>Engineer • Creator • Network Explorer</p>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- ABOUT CONTENT -->
+  <section class="about-container">
+    <div class="about-photo">
+      <img src="img/profile.jpg" alt="Profile Photo">
+    </div>
+
+    <div class="about-text">
+      <h2>Hi, I'm <span class="highlight">Jhosua Orrego García</span></h2>
+      <p>
+        I’m a Systems and Telecommunications Engineering student passionate about <strong>network automation, cybersecurity</strong> and the intersection between <strong>code and infrastructure</strong>.
+        My focus is on building smarter, more reliable network environments through automation and scripting.
+      </p>
+
+      <p>
+        I enjoy learning, sharing knowledge, and solving problems through technology.  
+        This blog is my way to document my journey — from basic labs to advanced deployments.
+      </p>
+
+      <div class="skills">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Python, Netmiko, Flask</li>
+          <li>Linux / Network Security</li>
+          <li>React.js, MySQL, PHP, Java</li>
+          <li>CCNA 200-301 Certified</li>
+        </ul>
+      </div>
+
+      <div class="languages">
+        <h3>Languages</h3>
+        <p>🇪🇸 Spanish — Native<br>🇬🇧 English — Intermediate<br>🇳🇱 Dutch — Basic</p>
+      </div>
+
+      <a href="Jhosua_Orrego_CV.pdf" class="btn" download>📄 Download CV</a>
+    </div>
   </section>
+
+  <div class="section-divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with 💻 + ☕ by <span class="highlight">TheSubnetGuy</span></p>
+    <div class="socials">
+      <a href="https://github.com/thesubnetguy24" target="_blank">GitHub</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
