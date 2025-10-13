@@ -137,3 +137,11 @@
   color: #000;
   box-shadow: 0 0 20px #facc15, 0 0 40px #facc15;
 }
+
+/* ✅ JUSTIFICAR TEXTOS EN SECCIONES CLAVE */
+.content > p,
+.purpose-block p,
+.theme p {
+  text-align: justify;
+  text-justify: inter-word;
+}
