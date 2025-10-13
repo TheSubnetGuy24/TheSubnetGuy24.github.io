@@ -1,0 +1,75 @@
+/* ================================
+   INDEX PAGE STYLES
+================================== */
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background-color: #0f0f0f;
+}
+
+.hero h1 {
+  font-family: var(--font-pixel);
+  font-size: 1.6rem;
+  color: #fff;
+  text-shadow: 0 0 10px var(--accent);
+}
+
+.hero p {
+  font-family: var(--font-pixel);
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin-top: 25px;
+}
+
+.section-divider {
+  height: 60px;
+  background-color: #111;
+  background-image: linear-gradient(90deg, rgba(250, 204, 21, 0.08) 1px, transparent 1px),
+                    linear-gradient(rgba(250, 204, 21, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+/* -------- PURPOSE SECTION -------- */
+.content {
+  text-align: center;
+  padding: 100px 10%;
+  background: linear-gradient(180deg, #0f0f0f 0%, #111 100%);
+}
+
+.glow-title h2 {
+  font-family: var(--font-pixel);
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent), 0 0 30px rgba(250, 204, 21, 0.5);
+  font-size: 1.2rem;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 15px var(--accent); }
+  50% { text-shadow: 0 0 30px var(--accent); }
+}
+
+.content p {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 25px auto;
+}
+
+.purpose-block {
+  background: linear-gradient(145deg, #181818, #1f1f1f);
+  border: 1px solid #3a3a3a;
+  border-radius: 12px;
+  padding: 50px 40px;
+  margin-top: 50px;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.08);
+  transition: 0.5s;
+}
+
+.purpose-block:hover {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.25);
+}
