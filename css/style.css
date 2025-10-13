@@ -27,15 +27,136 @@ nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,
 }
 
 
-/* CONTENT */
-.content{text-align:center;padding:80px 20px}
-.intro h2{font-family:'Press Start 2P',cursive;font-size:1rem;color:#facc15;margin-bottom:25px;text-shadow:0 0 6px #facc15}
-.intro p{max-width:700px;margin:0 auto 60px;color:#b3b3b3;line-height:1.8}
-.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:30px}
-.card{background-color:#1b1b1b;border:2px solid #2a2a2a;border-radius:12px;padding:30px;width:300px;transition:.4s ease}
-.card:hover{border-color:#facc15;transform:translateY(-8px)scale(1.03);box-shadow:0 0 20px rgba(250,204,21,0.3)}
-.card h3{font-family:'Press Start 2P',cursive;font-size:.8rem;color:#facc15;margin-bottom:15px}
-.card p{font-size:.9rem;color:#c5c5c5;line-height:1.6}
+/* ----------- CONTENT / ABOUT PURPOSE ----------- */
+.content {
+  text-align: center;
+  padding: 100px 10%;
+  background: linear-gradient(180deg, #0f0f0f 0%, #111111 100%);
+}
+
+/* Título principal */
+.content h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  color: #facc15;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px #facc15;
+  letter-spacing: 1px;
+}
+
+/* Texto descriptivo principal */
+.content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  color: #c5c5c5;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto 25px;
+}
+
+/* Bloque principal de propósito */
+.purpose-block {
+  background: radial-gradient(circle at top, rgba(250, 204, 21, 0.05), #1a1a1a 80%);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 50px 40px;
+  margin-top: 50px;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.08);
+  transition: all 0.4s ease;
+}
+
+.purpose-block:hover {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.18);
+  transform: translateY(-5px);
+}
+
+/* Mini encabezados internos */
+.purpose-block h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: #facc15;
+  margin-bottom: 15px;
+  text-shadow: 0 0 6px #facc15;
+}
+
+/* Sección temática (3 columnas visuales) */
+.themes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.theme {
+  background: #1b1b1b;
+  border: 1px solid #2a2a2a;
+  border-left: 4px solid #facc15;
+  border-radius: 8px;
+  width: 280px;
+  padding: 30px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.theme:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.25);
+}
+
+.theme h4 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+.theme p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #c5c5c5;
+  line-height: 1.6;
+}
+
+/* CTA (Call To Action) */
+.cta {
+  margin-top: 80px;
+}
+
+.cta .btn {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #facc15;
+  color: #0d0d0d;
+  padding: 12px 20px;
+  font-size: 0.7rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta .btn:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #facc15, 0 0 40px #facc15;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .content {
+    padding: 70px 20px;
+  }
+
+  .theme {
+    width: 90%;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
 
 /* FOOTER con glow */
 footer{
