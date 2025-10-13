@@ -1,0 +1,80 @@
+/* LAB HERO */
+.lab-hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #0f0f0f 0%, #111 100%);
+  border-bottom: 2px solid #facc15;
+}
+
+.lab-hero h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: 0 0 10px #facc15, 0 0 30px #facc15;
+  letter-spacing: 2px;
+}
+
+.lab-hero p {
+  font-family: 'Poppins', sans-serif;
+  color: #facc15;
+  font-size: 1rem;
+  margin-top: 25px;
+}
+
+/* LAB CONTENT */
+.lab-content {
+  padding: 80px 10%;
+  background: linear-gradient(180deg, #111 0%, #0f0f0f 100%);
+}
+
+.lab-section {
+  margin-bottom: 60px;
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  border-left: 4px solid #facc15;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.08);
+}
+
+.lab-section h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+.lab-section p, 
+.lab-section ol, 
+.lab-section pre, 
+.lab-section code {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #ddd;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.lab-section img.lab-image {
+  display: block;
+  margin: 25px auto;
+  max-width: 90%;
+  border: 2px solid #facc15;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.15);
+}
+
+/* CODE BLOCK */
+pre {
+  background: #101010;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #2a2a2a;
+}
+
+code {
+  color: #facc15;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
