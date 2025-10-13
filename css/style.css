@@ -1,50 +1,151 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background-color:#0d0d0d;color:#f5f5f5;scroll-behavior:smooth}
-
-/* NAVBAR */
-nav{position:sticky;top:0;z-index:1000;background:rgba(18,18,18,0.8);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:2px solid #facc15;box-shadow:0 0 10px rgba(250,204,21,0.2);transition:.3s}
-nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,0.4)}
-.logo{font-family:'Press Start 2P',cursive;font-size:.9rem;color:#facc15;letter-spacing:2px;text-shadow:0 0 10px #facc15;transition:.3s}
-.logo:hover{text-shadow:0 0 15px #facc15,0 0 30px #facc15}
-.nav-links{display:flex;gap:2rem}
-.nav-links a{font-family:'Press Start 2P',cursive;color:#f5f5f5;font-size:.6rem;text-decoration:none;transition:.3s;position:relative}
-.nav-links a:hover{color:#facc15;text-shadow:0 0 6px #facc15}
-
-/* HERO */
-.hero{text-align:center;padding:120px 20px;background-color:#0f0f0f}
-.hero h1{font-family:'Press Start 2P',cursive;font-size:1.6rem;color:#fff;text-transform:uppercase;letter-spacing:2px;text-shadow:0 0 8px #facc15}
-.hero p{font-family:'Press Start 2P',cursive;color:#facc15;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-top:25px}
-
-.section-divider {
-  height:60px;
-  background-color:#111;
-  background-image:
-    linear-gradient(90deg,rgba(250,204,21,0.08) 1px,transparent 1px),
-    linear-gradient(rgba(250,204,21,0.08) 1px,transparent 1px);
-  background-size:20px 20px;
-  border-top:1px solid #facc15;
-  border-bottom:1px solid #facc15;
+/* ==========================
+   GLOBAL RESET
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+}
 
-/* ----------- CONTENT / ABOUT PURPOSE ----------- */
+/* ==========================
+   NAVBAR
+========================== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #facc15;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+  transition: 0.3s;
+}
+
+nav.scrolled {
+  background: rgba(18, 18, 18, 0.95);
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.4);
+}
+
+.logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  color: #facc15;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #facc15;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px #facc15, 0 0 30px #facc15;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: 'Press Start 2P', cursive;
+  color: #f5f5f5;
+  font-size: 0.6rem;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #facc15;
+  text-shadow: 0 0 6px #facc15;
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background-color: #0f0f0f;
+}
+
+.hero h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #facc15;
+}
+
+.hero p {
+  font-family: 'Press Start 2P', cursive;
+  color: #facc15;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+/* ==========================
+   SECTION DIVIDER
+========================== */
+.section-divider {
+  height: 60px;
+  background-color: #111;
+  background-image:
+    linear-gradient(90deg, rgba(250, 204, 21, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(250, 204, 21, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-top: 1px solid #facc15;
+  border-bottom: 1px solid #facc15;
+}
+
+/* ==========================
+   CONTENT / ABOUT PURPOSE
+========================== */
 .content {
   text-align: center;
   padding: 100px 10%;
   background: linear-gradient(180deg, #0f0f0f 0%, #111111 100%);
 }
 
-/* Título principal */
-.content h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
-  color: #facc15;
-  margin-bottom: 30px;
-  text-shadow: 0 0 8px #facc15;
-  letter-spacing: 1px;
+/* --- Glow title effect --- */
+.glow-title {
+  position: relative;
+  display: inline-block;
 }
 
-/* Texto descriptivo principal */
+.glow-title h2 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Press Start 2P', cursive;
+  color: #facc15;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #facc15, 0 0 30px rgba(250, 204, 21, 0.5);
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 15px #facc15, 0 0 30px rgba(250, 204, 21, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 25px #facc15, 0 0 50px rgba(250, 204, 21, 0.6);
+  }
+}
+
+/* --- Texto principal --- */
 .content p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.05rem;
@@ -54,23 +155,37 @@ nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,
   margin: 0 auto 25px;
 }
 
-/* Bloque principal de propósito */
+/* --- Fade + Slide animation --- */
+.animated {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.4s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Purpose block --- */
 .purpose-block {
-  background: radial-gradient(circle at top, rgba(250, 204, 21, 0.05), #1a1a1a 80%);
-  border: 1px solid #2a2a2a;
+  background: linear-gradient(145deg, #181818, #1f1f1f);
+  border: 1px solid #3a3a3a;
   border-radius: 12px;
   padding: 50px 40px;
   margin-top: 50px;
-  box-shadow: 0 0 20px rgba(250, 204, 21, 0.08);
-  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.08);
+  transition: all 0.5s ease;
 }
 
 .purpose-block:hover {
-  box-shadow: 0 0 25px rgba(250, 204, 21, 0.18);
-  transform: translateY(-5px);
+  background: linear-gradient(145deg, #1a1a1a, #242424);
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.25);
 }
 
-/* Mini encabezados internos */
 .purpose-block h3 {
   font-family: 'Press Start 2P', cursive;
   font-size: 0.8rem;
@@ -79,7 +194,7 @@ nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,
   text-shadow: 0 0 6px #facc15;
 }
 
-/* Sección temática (3 columnas visuales) */
+/* --- Theme cards --- */
 .themes {
   display: flex;
   justify-content: center;
@@ -105,10 +220,19 @@ nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,
 }
 
 .theme h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: 'Press Start 2P', cursive;
   font-size: 0.75rem;
   color: #facc15;
   margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.theme:hover h4 {
+  text-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
+  transform: scale(1.05);
 }
 
 .theme p {
@@ -118,7 +242,7 @@ nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,
   line-height: 1.6;
 }
 
-/* CTA (Call To Action) */
+/* --- CTA Button --- */
 .cta {
   margin-top: 80px;
 }
@@ -140,7 +264,26 @@ nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,
   box-shadow: 0 0 20px #facc15, 0 0 40px #facc15;
 }
 
-/* RESPONSIVE */
+/* --- Optional CRT scanline effect --- */
+.content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 2px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .content {
     padding: 70px 20px;
@@ -155,28 +298,44 @@ nav.scrolled{background:rgba(18,18,18,0.95);box-shadow:0 0 25px rgba(250,204,21,
   }
 }
 
-
-
-
-/* FOOTER con glow */
-footer{
-  background:radial-gradient(circle at top,rgba(250,204,21,0.15),#1a1a1a 80%);
-  border-top:2px solid #facc15;
-  box-shadow:0 -4px 15px rgba(250,204,21,0.2);
-  text-align:center;
-  padding:40px 20px;
-  font-family:'Press Start 2P',cursive;
-  font-size:.6rem;
-  letter-spacing:1px;
-  margin-top:60px;
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  background: radial-gradient(circle at top, rgba(250, 204, 21, 0.15), #1a1a1a 80%);
+  border-top: 2px solid #facc15;
+  box-shadow: 0 -4px 15px rgba(250, 204, 21, 0.2);
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  margin-top: 60px;
 }
-footer .highlight{color:#facc15}
-footer .socials{margin-top:20px}
-footer .socials a{color:#facc15;margin:0 10px;text-decoration:none;transition:.3s}
-footer .socials a:hover{color:#fff;text-shadow:0 0 8px #facc15}
 
-/* ---------- LABS FEED STYLE ---------- */
+footer .highlight {
+  color: #facc15;
+}
 
+footer .socials {
+  margin-top: 20px;
+}
+
+footer .socials a {
+  color: #facc15;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #facc15;
+}
+
+/* ==========================
+   LABS FEED STYLE
+========================== */
 .labs-hero {
   background: linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
   border-bottom: 2px solid #facc15;
@@ -199,7 +358,6 @@ footer .socials a:hover{color:#fff;text-shadow:0 0 8px #facc15}
   text-shadow: 0 0 8px #facc15;
 }
 
-/* LAB FEED */
 .labs-feed {
   display: flex;
   flex-direction: column;
@@ -295,4 +453,3 @@ footer .socials a:hover{color:#fff;text-shadow:0 0 8px #facc15}
     font-size: 0.9rem;
   }
 }
-
