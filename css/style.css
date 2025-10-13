@@ -53,3 +53,57 @@ footer .highlight{color:#facc15}
 footer .socials{margin-top:20px}
 footer .socials a{color:#facc15;margin:0 10px;text-decoration:none;transition:.3s}
 footer .socials a:hover{color:#fff;text-shadow:0 0 8px #facc15}
+
+/* ---------- LABS PAGE SPECIFIC ---------- */
+
+/* Fondo hero especial */
+.labs-hero {
+  background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+  border-bottom: 2px solid #facc15;
+  padding: 140px 20px;
+}
+
+.labs-hero h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
+}
+
+.labs-hero p {
+  font-family: 'Press Start 2P', cursive;
+  color: #facc15;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  text-shadow: 0 0 8px #facc15;
+}
+
+/* Botón “View Lab” */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 14px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  color: #0d0d0d;
+  background-color: #facc15;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
+}
+
+/* Featured cards */
+.card.featured {
+  border-color: #facc15;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.25);
+  background: linear-gradient(180deg, #1b1b1b, #141414);
+}
+
