@@ -31,8 +31,8 @@
     </div>
   </nav>
 
-  <!-- HERO (usa el mismo diseño del labs-hero) -->
-  <header class="labs-hero">
+  <!-- HERO -->
+  <header class="lab-hero">
     <h1>🔧 VMware ESXi Setup on VMware Workstation</h1>
     <p>Building a nested virtualization environment for testing and training.</p>
   </header>
@@ -40,76 +40,62 @@
   <!-- SEPARADOR -->
   <div class="section-divider"></div>
 
-  <!-- CONTENIDO DEL LAB -->
-  <section class="labs-feed">
+  <!-- LAB CONTENT -->
+  <section class="lab-content">
 
-    <article class="lab-item">
-      <div class="lab-info">
-        <h2>🧠 Overview</h2>
-        <p>
-          This lab focuses on installing and configuring <strong>VMware ESXi</strong> inside 
-          <strong>VMware Workstation</strong> to create a self-contained, 
-          virtualized environment for network testing and system performance validation.
-        </p>
-      </div>
-    </article>
+    <!-- OVERVIEW -->
+    <div class="lab-section">
+      <h2>🧠 Overview</h2>
+      <p>
+        This lab focuses on installing and configuring <strong>VMware ESXi</strong> inside 
+        <strong>VMware Workstation</strong> to create a self-contained, 
+        virtualized environment for network testing and system performance validation.
+      </p>
+    </div>
 
-    <article class="lab-item">
-      <div class="lab-info">
-        <h2>🗺️ Topology</h2>
-        <p>
-          The setup includes one <strong>ESXi host</strong>, a <strong>management VM</strong>, 
-          and several <strong>virtual switches</strong> for isolated LAN and DMZ networks.
-        </p>
-        <img src="img/labs/esxi-topology.png" alt="VMware ESXi Topology" style="max-width:90%; border:2px solid #facc15; border-radius:8px; display:block; margin:20px auto;">
-      </div>
-    </article>
+    <!-- TOPOLOGY -->
+    <div class="lab-section">
+      <h2>🗺️ Topology</h2>
+      <p>
+        The setup includes one <strong>ESXi host</strong>, a <strong>management VM</strong>, 
+        and several <strong>virtual switches</strong> for isolated LAN and DMZ networks.
+      </p>
+      <img src="img/labs/esxi-topology.png" alt="VMware ESXi Topology" class="lab-image">
+    </div>
 
-    <article class="lab-item">
-      <div class="lab-info">
-        <h2>⚙️ Setup Steps</h2>
-        <p>
-          Follow these key steps to complete the setup:
-        </p>
-        <ol style="color:#d1d1d1; font-family:'Poppins',sans-serif; line-height:1.8; text-align:justify;">
-          <li>Install <strong>VMware Workstation</strong> and create a VM for ESXi.</li>
-          <li>Enable <strong>nested virtualization</strong> and VT-x in settings.</li>
-          <li>Attach three network adapters: <strong>LAN</strong>, <strong>DMZ</strong>, and <strong>Management</strong>.</li>
-          <li>Deploy a <strong>pfSense firewall</strong> or test VM and validate connectivity.</li>
-        </ol>
-      </div>
-    </article>
+    <!-- SETUP STEPS -->
+    <div class="lab-section">
+      <h2>⚙️ Setup Steps</h2>
+      <p>Follow these key steps to complete the setup:</p>
+      <ol>
+        <li>Install <strong>VMware Workstation</strong> and create a VM for ESXi.</li>
+        <li>Enable <strong>nested virtualization</strong> and VT-x in settings.</li>
+        <li>Attach three network adapters: <strong>LAN</strong>, <strong>DMZ</strong>, and <strong>Management</strong>.</li>
+        <li>Deploy a <strong>pfSense firewall</strong> or test VM and validate connectivity.</li>
+      </ol>
+    </div>
 
-    <article class="lab-item">
-      <div class="lab-info">
-        <h2>💻 Example Commands</h2>
-        <pre style="background:#101010; padding:15px; border-radius:8px; color:#facc15; overflow-x:auto;">
+    <!-- COMMANDS -->
+    <div class="lab-section">
+      <h2>💻 Example Commands</h2>
+      <pre><code>
 # Enable nested virtualization in PowerShell
 Set-VMProcessor -VMName "ESXi-Lab" -ExposeVirtualizationExtensions $true
 
 # Check ESXi management interface
 ping 192.168.10.2
-        </pre>
-      </div>
-    </article>
+      </code></pre>
+    </div>
 
-    <article class="lab-item">
-      <div class="lab-info">
-        <h2>📊 Results</h2>
-        <p>
-          The environment successfully runs nested virtualization and simulates 
-          real enterprise scenarios, including <strong>firewall testing</strong>, 
-          <strong>network segmentation</strong>, and <strong>resource monitoring</strong>.
-        </p>
-
-        <div class="tags">
-          <span>VMware ESXi</span>
-          <span>VMware Workstation</span>
-          <span>Virtualization</span>
-          <span>Networking</span>
-        </div>
-      </div>
-    </article>
+    <!-- RESULTS -->
+    <div class="lab-section">
+      <h2>📊 Results</h2>
+      <p>
+        The environment successfully runs nested virtualization and simulates 
+        real enterprise scenarios, including <strong>firewall testing</strong>, 
+        <strong>network segmentation</strong>, and <strong>resource monitoring</strong>.
+      </p>
+    </div>
 
   </section>
 
