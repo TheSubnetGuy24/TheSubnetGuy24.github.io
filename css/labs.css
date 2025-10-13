@@ -1,4 +1,9 @@
 .labs-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background: linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
   border-bottom: 2px solid #facc15;
   padding: 140px 20px;
@@ -9,15 +14,26 @@
   font-size: 1.6rem;
   color: #ffffff;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px #facc15;
+  text-shadow: 0 0 10px #facc15, 0 0 25px #facc15;
+  margin-bottom: 25px;
 }
 
 .labs-hero p {
   font-family: 'Press Start 2P', cursive;
   color: #facc15;
   font-size: 0.8rem;
-  margin-top: 20px;
+  margin-top: 10px;
   text-shadow: 0 0 8px #facc15;
+}
+
+/* SEPARADOR */
+.section-divider {
+  width: 80%;
+  height: 2px;
+  margin: 40px auto;
+  background: radial-gradient(circle, #facc15 0%, transparent 70%);
+  box-shadow: 0 0 15px #facc15;
+  opacity: 0.8;
 }
 
 .labs-feed {
@@ -37,79 +53,13 @@
   background: linear-gradient(180deg, #1b1b1b, #141414);
   border: 1px solid #2a2a2a;
   border-left: 4px solid #facc15;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 40px;
-  box-shadow: 0 0 10px rgba(250, 204, 21, 0.05);
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.05);
   transition: 0.4s ease;
 }
 
 .lab-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(250, 204, 21, 0.25);
-}
-
-.lab-info h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.9rem;
-  color: #facc15;
-  margin-bottom: 15px;
-}
-
-.lab-info p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  color: #d1d1d1;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.tags span {
-  background-color: #facc15;
-  color: #0d0d0d;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.5rem;
-  padding: 5px 10px;
-  border-radius: 4px;
-  letter-spacing: 1px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 14px;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.55rem;
-  color: #0d0d0d;
-  background-color: #facc15;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
-}
-
-@media (max-width: 768px) {
-  .labs-feed {
-    padding: 50px 20px;
-  }
-  .lab-item {
-    padding: 25px;
-  }
-  .lab-info h2 {
-    font-size: 0.8rem;
-  }
-  .lab-info p {
-    font-size: 0.9rem;
-  }
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.3);
 }
