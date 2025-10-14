@@ -91,28 +91,108 @@
       <img src="img/labs/esxi-download6.png" alt="Downloading the VMware ESXi ISO" class="lab-image">
     </div>
 
-
-    <!-- TOPOLOGY -->
+    <!-- Setting VM -->
     <div class="lab-section">
-      <h2>⚙️ ISO Setup on VM</h2>
+      <h2>⚙️ Setting Up VMware ESXi in VMware Workstation</h2>
       <p>
-        The setup includes one <strong>ESXi host</strong>, a <strong>management VM</strong>, 
-        and several <strong>virtual switches</strong> for isolated LAN and DMZ networks.
+        In this section, we’ll configure the <strong>VMware ESXi ISO</strong> inside 
+        <strong>VMware Workstation Pro</strong> to create a nested virtualization lab environment.
+        The process involves creating a new virtual machine, assigning resources, and customizing
+        network settings to ensure proper functionality.
       </p>
-      <img src="img/labs/esxi-topology.png" alt="VMware ESXi Topology" class="lab-image">
+    
+      <p>
+        First, open <strong>VMware Workstation</strong> and click on 
+        <strong>New Virtual Machine</strong>. Choose <em>Custom (Advanced)</em> and click 
+        <strong>Next</strong>. When prompted to select the hardware version, 
+        pick the latest one available for maximum compatibility.
+      </p>
+    
+      <p>
+        Next, select <strong>Installer disc image file (ISO)</strong> and browse to locate the 
+        <strong>VMware ESXi ISO</strong> you downloaded earlier.
+      </p>
+      <img src="img/labs/esxi-setup-01.png" alt="Selecting ESXi ISO" class="lab-image">
+    
+      <p>
+        Then, choose <strong>VMware ESX</strong> as the guest operating system and pick the latest
+        version. After that, give your virtual machine a meaningful name and select the directory
+        where it will be stored.
+      </p>
+    
+      <p>
+        For CPU configuration, although two cores are enough, it’s recommended to allocate 
+        <strong>2 processors and 2 cores each</strong> (for a total of 4 cores) to improve performance 
+        during nested virtualization.
+      </p>
+      <img src="img/labs/esxi-setup-02.png" alt="Processor Configuration" class="lab-image">
+    
+      <p>
+        Moving on to memory, the minimum recommended is <strong>8 GB</strong>, but allocating 
+        <strong>12–16 GB</strong> will offer better performance depending on how many devices or 
+        services you plan to run.
+      </p>
+      <img src="img/labs/esxi-setup-03.png" alt="Memory Configuration" class="lab-image">
+    
+      <p>
+        For the network configuration step, select <strong>“Do not use a network connection”</strong> 
+        for now — we’ll manually add and configure a virtual adapter later on.
+      </p>
+    
+      <p>
+        When you reach the <strong>I/O Controller Type</strong> selection, choose the recommended 
+        option: <strong>Paravirtualized SCSI</strong>. This is preferred because:
+      </p>
+      <ul style="text-align: justify; color: #d1d1d1; line-height: 1.8;">
+        <li>It is natively supported by ESXi.</li>
+        <li>It provides higher I/O efficiency in nested virtualization environments.</li>
+        <li>It reduces overhead between Workstation and the ESXi VM.</li>
+      </ul>
+      <img src="img/labs/esxi-setup-04.png" alt="I/O Controller Type" class="lab-image">
+    
+      <p>
+        Continue to the disk configuration. Choose <strong>SCSI type</strong> and select 
+        <strong>Create a new virtual disk</strong>. For size, <strong>60 GB</strong> is fine for testing, 
+        but <strong>120 GB or more</strong> is ideal for larger setups or multiple nested VMs.
+      </p>
+    
+      <p>
+        You can leave the <em>“Split virtual disk into multiple files”</em> option enabled for 
+        compatibility, or store it as a single file if your system has high performance.
+      </p>
+      <img src="img/labs/esxi-setup-05.png" alt="Virtual Disk Configuration" class="lab-image">
+    
+      <p>
+        Once finished, click <strong>Finish</strong> but don’t power on the VM yet — first, we need 
+        to configure a <strong>custom VMnet</strong> for network connectivity.
+      </p>
+    
+      <p>
+        Go to <strong>Edit → Virtual Network Editor</strong>, click 
+        <strong>Change Settings</strong>, and create a new virtual adapter using 
+        <strong>VMnet0</strong>. Set it as <strong>Bridged</strong> and select your physical adapter, 
+        for example <em>Intel(R) Wi-Fi 6 AX201 160MHz</em>. Click <strong>OK</strong> to save.
+      </p>
+      <img src="img/labs/esxi-setup-06.png" alt="Virtual Network Editor" class="lab-image">
+    
+      <p>
+        Next, open your VM’s settings and click on <strong>Add → Network Adapter</strong>.
+      </p>
+      <img src="img/labs/esxi-setup-07.png" alt="Adding Network Adapter" class="lab-image">
+    
+      <p>
+        Finally, select <strong>Custom</strong> and choose the <strong>VMnet0</strong> network 
+        you just created. Ensure that <em>Connect at power on</em> is checked, then click 
+        <strong>OK</strong> to save changes.
+      </p>
+      <img src="img/labs/esxi-setup-08.png" alt="VM Network Configuration" class="lab-image">
+    
+      <p>
+        At this point, your VMware ESXi VM is properly configured with optimized CPU, memory, 
+        storage, and networking parameters — ready for installation and further customization.
+      </p>
     </div>
 
-    <!-- SETUP STEPS -->
-    <div class="lab-section">
-      <h2>⚙️ Setup Steps</h2>
-      <p>Follow these key steps to complete the setup:</p>
-      <ol>
-        <li>Install <strong>VMware Workstation</strong> and create a VM for ESXi.</li>
-        <li>Enable <strong>nested virtualization</strong> and VT-x in settings.</li>
-        <li>Attach three network adapters: <strong>LAN</strong>, <strong>DMZ</strong>, and <strong>Management</strong>.</li>
-        <li>Deploy a <strong>pfSense firewall</strong> or test VM and validate connectivity.</li>
-      </ol>
-    </div>
 
     <!-- COMMANDS -->
     <div class="lab-section">
