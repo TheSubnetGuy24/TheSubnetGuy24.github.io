@@ -91,3 +91,25 @@ code {
   line-height: 1.8;
 }
 
+.lab-step ol {
+  margin-left: 1.5rem;
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+.lab-step ol ol {
+  margin-left: 1.5rem; /* 3er nivel */
+  list-style-type: lower-alpha;
+}
+
+.lab-step ol ol ol {
+  margin-left: 1.5rem; /* 4to nivel */
+  list-style-type: lower-roman;
+}
+
+.lab-step ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+
