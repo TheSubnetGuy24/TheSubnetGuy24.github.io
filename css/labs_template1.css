@@ -79,6 +79,7 @@ code {
   font-size: 0.9rem;
 }
 
+/* ✅ Niveles principales (ya los tienes) */
 .step-list {
   margin-left: 1.5rem;
   margin-top: 0.5rem;
@@ -98,18 +99,30 @@ code {
 }
 
 .lab-step ol ol {
-  margin-left: 1.5rem; /* 3er nivel */
+  margin-left: 1.5rem;
   list-style-type: lower-alpha;
 }
 
 .lab-step ol ol ol {
-  margin-left: 1.5rem; /* 4to nivel */
+  margin-left: 1.5rem;
   list-style-type: lower-roman;
 }
 
-.lab-step ul {
-  margin-left: 1.5rem;
+/* ✅ Tercer nivel (bullets simples) */
+.step-bullets-3 {
+  margin-left: 2rem;
   list-style-type: disc;
+  color: #d1d1d1;
+  line-height: 1.8;
 }
+
+/* ✅ Cuarto nivel (viñetas diferentes o más pequeñas) */
+.step-bullets-4 {
+  margin-left: 2.5rem;
+  list-style-type: circle; /* puedes usar 'square' si prefieres más contraste */
+  color: #c8c8c8;
+  line-height: 1.8;
+}
+
 
 
