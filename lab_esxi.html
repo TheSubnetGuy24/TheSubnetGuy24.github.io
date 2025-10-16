@@ -197,14 +197,113 @@
     <!-- COMMANDS -->
     <div class="lab-section">
       <h2>💻 VMware ESXi Installation</h2>
-      <pre><code>
-# Enable nested virtualization in PowerShell
-Set-VMProcessor -VMName "ESXi-Lab" -ExposeVirtualizationExtensions $true
-
-# Check ESXi management interface
-ping 192.168.10.2
-      </code></pre>
+    
+      <p style="text-align: justify;">
+        In this section, we’ll go through the complete process of setting up and installing 
+        <strong>VMware ESXi</strong> within a virtual machine using <strong>VMware Workstation Pro</strong>.  
+        This includes enabling nested virtualization, configuring the VM, and finalizing the ESXi installation.
+      </p>
+    
+      <h3>🧭 Step 1: Enable Nested Virtualization</h3>
+      <p style="text-align: justify;">
+        Before beginning the installation, it’s crucial to enable <strong>nested virtualization</strong>.  
+        This allows the virtualized ESXi host to use your physical CPU’s virtualization features 
+        (<strong>VT-x</strong> or <strong>AMD-V</strong>), which are required to run other virtual machines inside it.
+      </p>
+    
+      <ol>
+        <li>Navigate to the folder where your <strong>ESXi virtual machine</strong> is stored.</li>
+        <li>Locate and open the file named <strong>ESXi-Host.vmx</strong> using a text editor like <strong>Notepad</strong>.</li>
+        <li>Scroll to the end of the file and check for these lines:</li>
+      </ol>
+    
+      <img src="img/labs/esxi1-install.png" alt="Locate VMX File" class="responsive-img">
+      <img src="img/labs/esxi2-install.png" alt="VMX Configuration Lines" class="responsive-img">
+    
+      <p>If they are missing, add them manually at the end of the file, then save and close it.</p>
+    
+      <h3>💿 Step 2: Begin ESXi Installation</h3>
+      <p style="text-align: justify;">
+        Now power on your VM to start the installation. Wait until you see the <strong>welcome panel</strong> of the ESXi installer.
+      </p>
+    
+      <img src="img/labs/esxi3-install.png" alt="ESXi Welcome Screen" class="responsive-img">
+    
+      <ol>
+        <li>Press <strong>Enter</strong> to begin the installation process.</li>
+        <li>When the <strong>License Agreement</strong> appears, press <strong>F11</strong> to accept and continue.</li>
+        <li>Select your <strong>installation disk</strong> and press <strong>Enter</strong>.</li>
+      </ol>
+    
+      <img src="img/labs/esxi4-install.png" alt="Disk Selection" class="responsive-img">
+    
+      <ol start="4">
+        <li>Choose your <strong>keyboard layout</strong> and press <strong>Enter</strong>.</li>
+        <li>Create a <strong>root password</strong> that meets the following requirements:</li>
+      </ol>
+    
+      <ul>
+        <li>At least 8 characters</li>
+        <li>Must include at least three of the following:
+          <ul>
+            <li>Uppercase letters</li>
+            <li>Lowercase letters</li>
+            <li>Numbers</li>
+            <li>Symbols</li>
+          </ul>
+        </li>
+      </ul>
+    
+      <img src="img/labs/esxi5-install.png" alt="Root Password Creation" class="responsive-img">
+    
+      <ol start="6">
+        <li>Confirm the installation and wait until it finishes.</li>
+        <li>Once completed, you’ll see the installation success screen.</li>
+      </ol>
+    
+      <img src="img/labs/esxi6-install.png" alt="Installation Complete" class="responsive-img">
+    
+      <h3>🔧 Step 3: Disconnect the ISO File</h3>
+      <p style="text-align: justify;">
+        Before rebooting, open your <strong>Virtual Machine Settings</strong> and go to the 
+        <strong>CD/DVD (IDE)</strong> section.
+      </p>
+      <ol>
+        <li>Uncheck both <strong>Connected</strong> and <strong>Connect at power on</strong>.</li>
+        <li>This ensures the VM won’t boot from the ISO again during startup.</li>
+      </ol>
+    
+      <img src="img/labs/esxi7-install.png" alt="Disconnect ISO File" class="responsive-img">
+    
+      <h3>🚀 Step 4: Reboot and Verify</h3>
+      <p style="text-align: justify;">
+        Now you can safely reboot your virtual machine.  
+        When it starts, you should see your <strong>IPv4</strong> and <strong>IPv6</strong> addresses on the screen.
+      </p>
+    
+      <img src="img/labs/esxi8-install.png" alt="ESXi Boot Completed" class="responsive-img">
+    
+      <h3>🌐 Step 5: Access the ESXi Host Client</h3>
+      <ol>
+        <li>Copy the <strong>HTTPS IPv4 address</strong> displayed on screen.</li>
+        <li>Paste it into your browser’s address bar.</li>
+        <li>Log in using the following credentials:</li>
+      </ol>
+    
+      <ul>
+        <li><strong>Username:</strong> root</li>
+        <li><strong>Password:</strong> (the one you created earlier)</li>
+      </ul>
+    
+      <img src="img/labs/esxi9-install.png" alt="ESXi Web Interface Login" class="responsive-img">
+    
+      <p style="text-align: justify;">
+        🎉 <strong>Congratulations!</strong> You’ve successfully completed the 
+        <strong>VMware ESXi Host Client installation</strong>.  
+        Your virtualized environment is now ready to host and manage additional virtual machines.
+      </p>
     </div>
+
 
     <!-- RESULTS -->
     <div class="lab-section">
