@@ -127,11 +127,13 @@
       <br></br>
     
       <h3>🧰 Step 3: Define Guest Operating System</h3>
-      <ol>
-        <li>Select <strong>VMware ESX</strong> as the guest operating system.</li>
-        <li>Choose the latest available version from the list.</li>
-        <li>Assign a descriptive name to your virtual machine (e.g., <em>ESXi-Host</em>) and choose the storage directory.</li>
-      </ol>
+      <div class="step-list">
+        <ol>
+          <li>Select <strong>VMware ESX</strong> as the guest operating system.</li>
+          <li>Choose the latest available version from the list.</li>
+          <li>Assign a descriptive name to your virtual machine (e.g., <em>ESXi-Host</em>) and choose the storage directory.</li>
+        </ol>
+      </div>
       <br></br>
     
       <h3>⚡ Step 4: Configure Processors</h3>
@@ -167,32 +169,36 @@
         <strong>Paravirtualized SCSI (PVSCSI)</strong>.  
         This option is preferred because:
       </p>
-      <ul style="text-align: justify; color: #d1d1d1; line-height: 1.8;">
-        <li>It is natively supported by ESXi.</li>
-        <li>It provides higher I/O efficiency in nested virtualization environments.</li>
-        <li>It reduces processing overhead between Workstation and the ESXi VM.</li>
-      </ul>
+      <div class="step-list">
+        <ul style="text-align: justify; color: #d1d1d1; line-height: 1.8;">
+          <li>It is natively supported by ESXi.</li>
+          <li>It provides higher I/O efficiency in nested virtualization environments.</li>
+          <li>It reduces processing overhead between Workstation and the ESXi VM.</li>
+        </ul>
+      </div>
       <br></br>
       <img src="img/labs/esxi-setup-04.png" alt="I/O Controller Type" class="lab-image">
       <br></br>
     
       <h3>🧱 Step 8: Configure Virtual Disk</h3>
-      <ol>
-        <li>Select <strong>SCSI</strong> as the disk type.</li>
-        <li>Choose <strong>Create a new virtual disk</strong>.</li>
-        <li>Set the disk size according to your needs:
-          <ul>
-            <li><strong>60 GB</strong> → for testing or lightweight use.</li>
-            <li><strong>120 GB or more</strong> → for hosting multiple nested VMs.</li>
-          </ul>
-        </li>
-        <li>You can either:
-          <ul>
-            <li>Split the virtual disk into multiple files for compatibility, or</li>
-            <li>Store it as a single file for better performance (recommended for fast systems).</li>
-          </ul>
-        </li>
-      </ol>
+      <div class="step-list">
+        <ol>
+          <li>Select <strong>SCSI</strong> as the disk type.</li>
+          <li>Choose <strong>Create a new virtual disk</strong>.</li>
+          <li>Set the disk size according to your needs:
+            <ul>
+              <li><strong>60 GB</strong> → for testing or lightweight use.</li>
+              <li><strong>120 GB or more</strong> → for hosting multiple nested VMs.</li>
+            </ul>
+          </li>
+          <li>You can either:
+            <ul>
+              <li>Split the virtual disk into multiple files for compatibility, or</li>
+              <li>Store it as a single file for better performance (recommended for fast systems).</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
       <br></br>
       <img src="img/labs/esxi-setup-05.png" alt="Virtual Disk Configuration" class="lab-image">
       <br></br>
@@ -205,30 +211,36 @@
       <br></br>
     
       <h3>🌍 Step 10: Configure Custom Network (VMnet)</h3>
-      <ol>
-        <li>Go to <strong>Edit → Virtual Network Editor</strong>.</li>
-        <li>Click <strong>Change Settings</strong> to enable editing.</li>
-        <li>Add a new network adapter using <strong>VMnet0</strong>.</li>
-        <li>Set it as <strong>Bridged</strong> and select your active physical adapter 
-          (e.g., <em>Intel(R) Wi-Fi 6 AX201 160MHz</em>).</li>
-        <li>Click <strong>OK</strong> to save the configuration.</li>
-      </ol>
+      <div class="step-list">
+        <ol>
+          <li>Go to <strong>Edit → Virtual Network Editor</strong>.</li>
+          <li>Click <strong>Change Settings</strong> to enable editing.</li>
+          <li>Add a new network adapter using <strong>VMnet0</strong>.</li>
+          <li>Set it as <strong>Bridged</strong> and select your active physical adapter 
+            (e.g., <em>Intel(R) Wi-Fi 6 AX201 160MHz</em>).</li>
+          <li>Click <strong>OK</strong> to save the configuration.</li>
+        </ol>
+      </div>
       <br></br>
       <img src="img/labs/esxi-setup-06.png" alt="Virtual Network Editor" class="lab-image">
       <br></br>
     
       <h3>🔧 Step 11: Add Network Adapter to the VM</h3>
-      <ol>
-        <li>Open the settings of your <strong>ESXi virtual machine</strong>.</li>
-        <li>Click on <strong>Add → Network Adapter</strong>.</li>
-      </ol>
+      <div class="step-list">
+        <ol>
+          <li>Open the settings of your <strong>ESXi virtual machine</strong>.</li>
+          <li>Click on <strong>Add → Network Adapter</strong>.</li>
+        </ol>
+      </div>
       <br></br>
       <img src="img/labs/esxi-setup-07.png" alt="Adding Network Adapter" class="lab-image">
       <br></br>
-      <ol start="3">
-        <li>Select <strong>Custom</strong> and choose <strong>VMnet0</strong> (the network you just created).</li>
-        <li>Ensure that <em>Connect at power on</em> is checked, then click <strong>OK</strong>.</li>
-      </ol>
+      <div class="step-list">
+        <ol start="3">
+          <li>Select <strong>Custom</strong> and choose <strong>VMnet0</strong> (the network you just created).</li>
+          <li>Ensure that <em>Connect at power on</em> is checked, then click <strong>OK</strong>.</li>
+        </ol>
+      </div>
       <br></br>
       <img src="img/labs/esxi-setup-08.png" alt="VM Network Configuration" class="lab-image">
       <br></br>
