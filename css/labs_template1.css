@@ -78,3 +78,16 @@ code {
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
 }
+
+.step-list {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.step-list ol {
+  list-style-position: outside;
+  padding-left: 1rem;
+  color: #d1d1d1;
+  line-height: 1.8;
+}
+
